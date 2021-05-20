@@ -6,12 +6,12 @@ module.exports = {
   entry: ['/src/javascript/index.js', '/src/styles/index.sass'],
   output: {
     path: __dirname + '/dist/',
-    filename: 'app.js',
+    filename: '[hash].js',
   },
   mode: 'development',
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styles.css',
+      filename: '[hash].css',
     }),
     new htmlWebpackPlugin({
       template: './src/index.html',
